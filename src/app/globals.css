@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #FCFBF7;
+  --foreground: #24323A;
 }
 
 @theme inline {
@@ -10,17 +10,52 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+
+  /* Clinic Color System */
+  --color-teal-primary: #0F766E;
+  --color-teal-secondary: #159A8C;
+  --color-teal-dark: #0A5C56;
+  --color-mint-soft: #E8F6F3;
+  --color-mint-light: #F3FAF8;
+  --color-offwhite: #FCFBF7;
+  --color-accent: #E58A6A;
+  --color-accent-hover: #d47a5a;
+  --color-text-primary: #24323A;
+  --color-text-secondary: #66757C;
+  --color-text-light: #8A9BA3;
+  --color-border: #E2E8F0;
+  --color-border-light: #F1F5F9;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
   }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+}
+
+/* Selection color */
+::selection {
+  background-color: #E8F6F3;
+  color: #0F766E;
+}
+
+/* Focus visible for accessibility */
+:focus-visible {
+  outline: 2px solid #0F766E;
+  outline-offset: 2px;
+}
+
+/* Smooth scroll to anchor links */
+[id] {
+  scroll-margin-top: 5rem;
 }

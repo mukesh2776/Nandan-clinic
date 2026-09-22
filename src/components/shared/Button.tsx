@@ -13,6 +13,7 @@ interface ButtonProps {
   type?: 'button' | 'submit';
   disabled?: boolean;
   ariaLabel?: string;
+  external?: boolean;
 }
 
 const variantClasses: Record<ButtonVariant, string> = {
@@ -39,11 +40,19 @@ export default function Button({
   type = 'button',
   disabled = false,
   ariaLabel,
+  external = false,
 }: ButtonProps) {
   const baseClasses = 'inline-flex items-center justify-center font-semibold rounded-xl transition-all duration-300 focus:outline-none focus:ring-4 disabled:opacity-50 disabled:cursor-not-allowed';
   const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`;
 
   if (href) {
+    if (external) {
+      return (
+        <a href={href} target="_blank" rel="noopener noreferrer" className={classes} aria-label={ariaLabel}>
+          {children}
+        </a>
+      );
+    }
     return (
       <Link href={href} className={classes} aria-label={ariaLabel}>
         {children}

@@ -6,6 +6,7 @@ interface AnimateOnScrollProps {
   children: React.ReactNode;
   className?: string;
   animation?: 'fade-up' | 'fade-in' | 'fade-left' | 'fade-right' | 'scale';
+  direction?: 'up' | 'down' | 'left' | 'right';
   delay?: number;
   threshold?: number;
 }
@@ -37,27 +38,35 @@ export default function AnimateOnScroll({
   children,
   className = '',
   animation = 'fade-up',
+  direction,
   delay = 0,
   threshold = 0.1,
 }: AnimateOnScrollProps) {
+  const effectiveAnimation = direction
+    ? direction === 'up'
+      ? 'fade-up'
+      : direction === 'left'
+      ? 'fade-left'
+      : direction === 'right'
+      ? 'fade-right'
+      : 'fade-up'
+    : animation;
   const ref = useRef<HTMLDivElement>(null);
   const [isVisible, setIsVisible] = useState(false);
-  const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
 
   useEffect(() => {
+    if (typeof window === 'undefined') return;
+
     const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
-    setPrefersReducedMotion(mediaQuery.matches);
-
-    const handleChange = (e: MediaQueryListEvent) => setPrefersReducedMotion(e.matches);
-    mediaQuery.addEventListener('change', handleChange);
-    return () => mediaQuery.removeEventListener('change', handleChange);
-  }, []);
-
-  useEffect(() => {
-    if (prefersReducedMotion) {
-      setIsVisible(true);
-      return;
+    if (mediaQuery.matches) {
+      const timer = setTimeout(() => setIsVisible(true), 0);
+      return () => clearTimeout(timer);
     }
+
+    const handleChange = (e: MediaQueryListEvent) => {
+      if (e.matches) setIsVisible(true);
+    };
+    mediaQuery.addEventListener('change', handleChange);
 
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -75,17 +84,14 @@ export default function AnimateOnScroll({
     }
 
     return () => {
+      mediaQuery.removeEventListener('change', handleChange);
       if (currentRef) {
         observer.unobserve(currentRef);
       }
     };
-  }, [threshold, prefersReducedMotion]);
+  }, [threshold]);
 
-  const anim = animationClasses[animation];
-
-  if (prefersReducedMotion) {
-    return <div className={className}>{children}</div>;
-  }
+  const anim = animationClasses[effectiveAnimation] || animationClasses['fade-up'];
 
   return (
     <div
