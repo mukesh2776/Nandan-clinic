@@ -65,7 +65,7 @@ export default function Hero() {
               </div>
               
               <div className="absolute top-1/2 -left-6 lg:-left-12 -translate-y-1/2 bg-white shadow-lg rounded-2xl px-4 py-3 z-20 animate-bounce" style={{ animationDuration: '4s' }}>
-                <span className="font-semibold text-teal-primary text-sm whitespace-nowrap">Physical Rehabilitation</span>
+                <span className="font-semibold text-teal-primary text-sm whitespace-nowrap">Artificial Limb Centre</span>
               </div>
               
               <div className="absolute -bottom-6 -right-4 lg:-right-8 bg-white shadow-lg rounded-2xl px-4 py-3 z-20 animate-bounce" style={{ animationDuration: '3.5s' }}>

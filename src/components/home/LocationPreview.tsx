@@ -4,12 +4,12 @@ import { MapPin, Phone, Clock, Navigation } from 'lucide-react';
 
 export default function LocationPreview() {
   return (
-    <section className="py-20 bg-white">
+    <section id="contact" className="py-20 bg-white scroll-mt-24">
       <div className="container mx-auto px-6 lg:px-12">
         <SectionHeader 
           number="07" 
-          label="FIND US" 
-          title="Visit Our Clinic" 
+          label="CONTACT & LOCATION" 
+          title="Get In Touch & Visit Our Clinic" 
         />
 
         <div className="mt-12 flex flex-col lg:flex-row gap-10 lg:gap-16 bg-offwhite p-6 lg:p-8 rounded-3xl">
@@ -59,13 +59,22 @@ export default function LocationPreview() {
                     <Phone size={20} />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-text-primary mb-1">Contact</h4>
+                    <h4 className="font-semibold text-text-primary mb-1">Phone &amp; WhatsApp</h4>
                     <div className="flex flex-col gap-1">
-                      <a href="tel:7395811646" className="text-text-secondary text-sm hover:text-teal-primary transition-colors">
-                        7395811646
-                      </a>
-                      <a href="https://wa.me/917395811646" target="_blank" rel="noopener noreferrer" className="text-teal-primary text-sm font-medium hover:underline">
-                        Message on WhatsApp
+                      <div className="flex items-center gap-2">
+                        <span className="text-xs text-text-secondary">Rehab:</span>
+                        <a href="tel:7395811646" className="text-text-primary font-medium text-sm hover:text-teal-primary transition-colors">
+                          +91 73958 11646
+                        </a>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <span className="text-xs text-text-secondary">Dental:</span>
+                        <a href="tel:9787818833" className="text-text-primary font-medium text-sm hover:text-accent transition-colors">
+                          +91 97878 18833
+                        </a>
+                      </div>
+                      <a href="https://wa.me/917395811646" target="_blank" rel="noopener noreferrer" className="text-[#25D366] text-sm font-semibold hover:underline mt-1">
+                        Chat on WhatsApp &rarr;
                       </a>
                     </div>
                   </div>
@@ -78,21 +87,29 @@ export default function LocationPreview() {
                   <div>
                     <h4 className="font-semibold text-text-primary mb-1">Clinic Timings</h4>
                     <p className="text-text-secondary text-sm">
-                      3:00 PM - 9:00 PM
+                      3:00 PM – 9:00 PM (Daily)
                     </p>
                   </div>
                 </div>
               </div>
 
-              <a 
-                href="https://maps.app.goo.gl/cBXrAcy7vLk93ms97?g_st=aw" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 bg-teal-primary text-white px-6 py-3 rounded-lg font-medium hover:bg-teal-secondary transition-colors w-full sm:w-auto"
-              >
-                <Navigation size={18} />
-                Get Directions
-              </a>
+              <div className="flex flex-wrap gap-3">
+                <a 
+                  href="https://maps.app.goo.gl/cBXrAcy7vLk93ms97?g_st=aw" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-2 bg-teal-primary text-white px-5 py-2.5 rounded-xl font-medium hover:bg-teal-secondary transition-colors text-sm"
+                >
+                  <Navigation size={16} />
+                  Get Directions
+                </a>
+                <a 
+                  href="/contact"
+                  className="inline-flex items-center justify-center gap-2 bg-white text-teal-primary border border-teal-primary/30 px-5 py-2.5 rounded-xl font-medium hover:bg-mint-light transition-colors text-sm"
+                >
+                  View Full Contact Info
+                </a>
+              </div>
             </AnimateOnScroll>
           </div>
 

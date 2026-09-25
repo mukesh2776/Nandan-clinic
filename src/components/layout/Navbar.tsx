@@ -13,7 +13,7 @@ const navLinks = [
   { name: 'Services', href: '/services' },
   { name: 'Doctors', href: '/doctors' },
   { name: 'Testimonials', href: '/testimonials' },
-  { name: 'Location', href: '/location' },
+  { name: 'Contact', href: '/contact' },
 ];
 
 export default function Navbar() {

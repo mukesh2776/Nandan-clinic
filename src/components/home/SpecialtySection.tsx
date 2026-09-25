@@ -6,6 +6,8 @@ import AnimateOnScroll from '@/components/shared/AnimateOnScroll';
 
 export default function SpecialtySection() {
   const rehabServices = [
+    "Artificial Limb Centre",
+    "Prosthetics & Orthotics (Main Speciality)",
     "Robotic Gait Training (Lokomat)",
     "Stroke Rehabilitation",
     "Spinal Cord Injury Rehab",

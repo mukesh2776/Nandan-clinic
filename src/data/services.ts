@@ -11,8 +11,8 @@ export const rehabilitationServices: Service[] = [
   },
   {
     id: 'artificial-limb-centre',
-    name: 'Artificial Limb Centre',
-    description: 'Comprehensive prosthetic and orthotic services for upper and lower limb amputees, including custom fitting, alignment, and rehabilitation support.',
+    name: 'Artificial Limb Centre — Prosthetics & Orthotics',
+    description: 'Our in-house Artificial Limb Centre is where customised artificial limbs are fabricated on-site. We provide comprehensive prosthetic and orthotic services for upper and lower limb amputees, including custom design, fabrication, fitting, alignment, and complete rehabilitation support. Prosthetics & Orthotics is our main work and core speciality.',
     department: 'rehabilitation',
     featured: true,
     size: 'large',
@@ -93,9 +93,10 @@ export const rehabilitationServices: Service[] = [
   {
     id: 'prosthetic-orthotic-care',
     name: 'Prosthetic & Orthotic Care',
-    description: 'Custom prosthetic limbs and orthotic braces designed, fitted, and maintained for optimal comfort and function.',
+    description: 'Custom prosthetic limbs and orthotic braces designed, fabricated on-site, fitted, and maintained for optimal comfort and function. Our Artificial Limb Centre specialises in customised fabrication tailored to each patient.',
     department: 'rehabilitation',
-    size: 'small',
+    featured: true,
+    size: 'medium',
   },
   {
     id: 'diabetic-foot-care',

@@ -54,8 +54,9 @@ const approachCards = [
 ];
 
 const facilities = [
+  { name: 'Artificial Limb Centre (On-site Fabrication)', icon: Activity },
+  { name: 'Prosthetics & Orthotics Workshop', icon: ShieldCheck },
   { name: 'Robotic Gait Training Equipment (Lokomat/Exoskeleton)', icon: Cpu },
-  { name: 'Artificial Limb Centre', icon: Activity },
   { name: 'Physiotherapy Unit', icon: Brain },
   { name: 'Pain Management Clinic', icon: Stethoscope },
   { name: 'Dental Care Unit', icon: Smile },
@@ -95,10 +96,10 @@ export default function AboutPage() {
                 </h2>
                 <div className="w-20 h-1.5 bg-accent mt-6 rounded-full" />
                 <p className="text-lg text-text-secondary leading-relaxed mt-8">
-                  NandaN Robotic Rehabilitation Centre and Dr. Bala Dental Clinic is a multi-specialty healthcare facility in Thanjavur that brings together advanced physical rehabilitation and comprehensive dental care.
+                  NandaN Robotic Rehabilitation Centre and Dr. Bala Dental Clinic is a multi-specialty healthcare facility in Thanjavur that brings together advanced physical rehabilitation and comprehensive dental care. We are home to an in-house Artificial Limb Centre where customised artificial limbs are fabricated on-site.
                 </p>
                 <p className="text-lg text-text-secondary leading-relaxed">
-                  Our clinic is equipped with modern robotic rehabilitation technology and is led by experienced specialists dedicated to restoring mobility and healthy smiles.
+                  Our main work is Prosthetics &amp; Orthotics — providing custom-designed, fabricated, and fitted prosthetic limbs and orthotic devices. The clinic is also equipped with modern robotic rehabilitation technology and is led by experienced specialists dedicated to restoring mobility and healthy smiles.
                 </p>
                 <div className="flex flex-col gap-4 mt-8 border-l-4 border-teal-primary pl-6 py-2 bg-mint-light/50 rounded-r-2xl">
                   <p className="text-xl font-medium text-teal-primary italic">
@@ -294,7 +295,7 @@ export default function AboutPage() {
             align="center"
           />
           
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 mt-16 mb-20">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-6 mt-16 mb-20">
             {facilities.map((facility, idx) => (
               <AnimateOnScroll key={idx} delay={idx * 50}>
                 <div className="flex flex-col items-center text-center p-6 bg-offwhite rounded-2xl h-full border border-border-light hover:border-teal-primary/30 transition-colors">
@@ -305,17 +306,27 @@ export default function AboutPage() {
             ))}
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {['/images/clinic/nandan-poster.jpeg', '/images/clinic/combined-poster.jpeg', '/images/clinic/prosthetics-poster.jpeg'].map((src, idx) => (
-              <AnimateOnScroll key={idx} delay={idx * 100}>
-                <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-md">
-                  <Image
-                    src={src}
-                    alt={`Clinic Gallery Image ${idx + 1}`}
-                    fill
-                    className="object-cover hover:scale-105 transition-transform duration-700"
-                    sizes="(max-width: 768px) 100vw, 33vw"
-                  />
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              { src: '/images/clinic/artificial-limb.jpeg', title: 'Customised Artificial Limbs (Fabricated On-Site)' },
+              { src: '/images/clinic/prosthetics-poster.jpeg', title: 'Artificial Limb & Rehabilitation Centre' },
+              { src: '/images/clinic/nandan-poster.jpeg', title: 'Robotic Rehabilitation Services' },
+              { src: '/images/clinic/combined-poster.jpeg', title: 'Rehabilitation & Dental Facilities' }
+            ].map((item, idx) => (
+              <AnimateOnScroll key={idx} delay={idx * 80}>
+                <div className="rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow bg-white border border-border/60 flex flex-col h-full">
+                  <div className="relative aspect-[4/3] overflow-hidden bg-offwhite">
+                    <Image
+                      src={item.src}
+                      alt={item.title}
+                      fill
+                      className="object-contain p-2 hover:scale-105 transition-transform duration-500"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                    />
+                  </div>
+                  <div className="p-3 bg-white border-t border-border/40 text-center">
+                    <span className="text-xs font-semibold text-text-primary block">{item.title}</span>
+                  </div>
                 </div>
               </AnimateOnScroll>
             ))}
@@ -337,11 +348,12 @@ export default function AboutPage() {
                 <ul className="space-y-6">
                   {[
                     "Two specialities under one roof",
+                    "In-house Artificial Limb Centre — custom prosthetics fabricated on-site",
+                    "Prosthetics & Orthotics as our core speciality",
                     "Advanced robotic rehabilitation technology",
                     "First Physiatrist in and from Thanjavur",
                     "Experienced dental surgeon",
                     "Patient-centred, evidence-based approach",
-                    "Convenient location in Thanjavur"
                   ].map((feature, idx) => (
                     <li key={idx} className="flex items-center gap-4">
                       <div className="w-8 h-8 rounded-full bg-mint-light/20 flex items-center justify-center shrink-0">

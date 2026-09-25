@@ -39,6 +39,7 @@ export default function Footer() {
               <li><Link href="/services" className="hover:opacity-100 hover:underline transition-all">Services</Link></li>
               <li><Link href="/doctors" className="hover:opacity-100 hover:underline transition-all">Doctors</Link></li>
               <li><Link href="/testimonials" className="hover:opacity-100 hover:underline transition-all">Testimonials</Link></li>
+              <li><Link href="/contact" className="hover:opacity-100 hover:underline transition-all">Contact Us</Link></li>
             </ul>
           </div>
 
