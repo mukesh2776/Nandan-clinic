@@ -58,6 +58,20 @@ export default function DoctorProfile({ doctor, imagePosition = 'left' }: Doctor
           </div>
         )}
 
+        {doctor.titles && doctor.titles.length > 0 && (
+          <div>
+            <h3 className="text-xl font-bold text-text-primary mb-4">Professional Titles</h3>
+            <ul className="space-y-2">
+              {doctor.titles.map((title: string, idx: number) => (
+                <li key={idx} className="flex items-start gap-3 text-text-secondary">
+                  <CheckCircle2 className="w-5 h-5 text-accent shrink-0 mt-0.5" />
+                  <span>{title}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
+
         {doctor.roles && doctor.roles.length > 0 && (
           <div>
             <h3 className="text-xl font-bold text-text-primary mb-4">Professional Roles</h3>

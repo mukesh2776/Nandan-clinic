@@ -20,6 +20,14 @@ export const doctors: Doctor[] = [
       'Pain Management',
       'Robotic Gait Training',
     ],
+    titles: [
+      'Physiatrist (உடலியல் மற்றும் மறுவாழ்வு மருத்துவர்)',
+      'General Physician (பொது நல மருத்துவர்)',
+      'Pain Physician (வலி நிவாரண நிபுணர்)',
+      'Family Physician (குடும்ப மருத்துவர்)',
+      'LIC Medical Examiner (LIC மருத்துவ பரிசோதகர்)',
+      'Govt. Senior Civil Surgeon (அரசு சீனியர் சிவில் சர்ஜன்)',
+    ],
     bio: 'First Physiatrist in and from Thanjavur. Did MBBS at Thanjavur Medical College and completed post-graduate D.PMR at Madras Medical College. Did Fellowship in Pain Management (FIPM) at Delhi Pain Management Centre. Specialist in rehabilitation of CP Child, CTEV, Gait abnormalities, Stroke (Hemiplegia), Traumatic Brain Injury, Spinal Cord Injury (Paraplegia / Quadriplegia). Interested in Amputee Rehabilitation, Prosthetic and Orthotic Management, Diabetic Foot Care and Pain Management. Also serves as Physiatrist, General Physician, Pain Physician, Family Physician, LIC Medical Examiner, and Government Senior Civil Surgeon.',
     image: '/images/doctors/dr-balamurali.jpeg',
     roles: [

@@ -26,47 +26,97 @@ const rehabServices = [
   },
   { 
     id: '2', 
-    title: 'Robotic Gait Training', 
+    title: 'Robotic Rehabilitation & Gait Training', 
     shortDescription: 'Advanced robotic Lokomat assistance for walking recovery, neuro-rehabilitation, and functional gait correction.', 
     department: 'rehab' as const 
   },
   { 
     id: '3', 
-    title: 'Pain Management', 
-    shortDescription: 'Comprehensive pain relief strategies, interventional pain management, and specialized therapies led by Dr. Balamurali (FIPM).', 
+    title: 'Stroke & Neurological Rehabilitation', 
+    shortDescription: 'Multidisciplinary recovery programmes for stroke survivors to regain functional independence and neurological recovery.', 
     department: 'rehab' as const 
   },
   { 
     id: '4', 
-    title: 'Physiotherapy & OT', 
-    shortDescription: 'Targeted physical and occupational therapy tailored to restore mobility, strength, and activities of daily living.', 
-    department: 'rehab' as const 
-  },
-  { 
-    id: '5', 
-    title: 'Post Stroke Rehabilitation', 
-    shortDescription: 'Multidisciplinary recovery programmes for stroke survivors to regain functional independence.', 
-    department: 'rehab' as const 
-  },
-  { 
-    id: '6', 
-    title: 'Spinal Cord Injury Rehab', 
+    title: 'Spinal Cord Injury Rehabilitation', 
     shortDescription: 'Dedicated rehabilitation for paraplegia and quadriplegia patients to optimize mobility and self-reliance.', 
     department: 'rehab' as const 
   },
   { 
+    id: '5', 
+    title: 'Amputee Rehabilitation & Artificial Limbs', 
+    shortDescription: 'Complete amputee care from pre-prosthetic training through prosthetic fitting, gait training, and long-term follow-up.', 
+    department: 'rehab' as const 
+  },
+  { 
+    id: '6', 
+    title: 'Prosthetic & Orthotic Services', 
+    shortDescription: 'Custom prosthetic limbs and orthotic braces designed, fabricated on-site, fitted, and maintained for optimal comfort and function.', 
+    department: 'rehab' as const 
+  },
+  { 
     id: '7', 
-    title: 'Paediatric & CP Rehabilitation', 
-    shortDescription: 'Specialized therapy for children with Cerebral Palsy (CP), CTEV, and developmental gait abnormalities.', 
+    title: 'Paediatric Rehabilitation & Deformity Correction', 
+    shortDescription: 'Specialised therapy and deformity correction for children with Cerebral Palsy (CP), CTEV, and developmental conditions.', 
+    department: 'rehab' as const 
+  },
+  { 
+    id: '8', 
+    title: 'Pain Management & Rehabilitation', 
+    shortDescription: 'Comprehensive pain relief strategies, interventional pain management, and specialised therapies led by Dr. Balamurali (FIPM).', 
+    department: 'rehab' as const 
+  },
+  { 
+    id: '9', 
+    title: 'Sports & Orthopaedic Rehabilitation', 
+    shortDescription: 'Comprehensive rehabilitation for sports injuries and orthopaedic conditions to help patients return to activity safely.', 
+    department: 'rehab' as const 
+  },
+  { 
+    id: '10', 
+    title: 'Post-Surgical Rehabilitation', 
+    shortDescription: 'Customised recovery programmes focused on regaining strength, mobility, and function after surgical procedures.', 
+    department: 'rehab' as const 
+  },
+  { 
+    id: '11', 
+    title: 'Balance, Mobility & Fall Prevention', 
+    shortDescription: 'Targeted balance training and mobility improvement to reduce fall risk and enhance confidence in movement.', 
+    department: 'rehab' as const 
+  },
+  { 
+    id: '12', 
+    title: 'Occupational & Functional Rehabilitation', 
+    shortDescription: 'Therapeutic training to restore functional independence in daily activities and improve quality of life.', 
+    department: 'rehab' as const 
+  },
+  { 
+    id: '13', 
+    title: 'Assistive Devices & Mobility Aids', 
+    shortDescription: 'Expert assessment and provision of wheelchairs, walkers, crutches, and assistive technology to maximise independence.', 
+    department: 'rehab' as const 
+  },
+  { 
+    id: '14', 
+    title: 'Physiotherapy & Occupational Therapy', 
+    shortDescription: 'Evidence-based physical and occupational therapy customised to restore movement, strength, and functional independence.', 
     department: 'rehab' as const 
   },
 ];
 
 const dentalServices = [
-  { id: 'd1', title: 'Orthodontics (Braces)', shortDescription: 'Braces and clear aligners for teeth straightening, crowding correction, and bite alignment.', department: 'dental' as const },
-  { id: 'd2', title: 'Dental Implants', shortDescription: 'Permanent titanium solutions for missing teeth restoring full chewing function and aesthetics.', department: 'dental' as const },
-  { id: 'd3', title: 'Teeth Whitening', shortDescription: 'Professional in-office whitening procedures for a noticeably brighter, cleaner smile.', department: 'dental' as const },
-  { id: 'd4', title: 'General Dental Care', shortDescription: 'Routine check-ups, root canals, cleanings, tooth restorations, and preventive oral health.', department: 'dental' as const },
+  { id: 'd1', title: 'Complete Dental Check-Up', shortDescription: 'Thorough examination, X-rays, and comprehensive oral assessment to maintain dental health.', department: 'dental' as const },
+  { id: 'd2', title: 'Teeth Cleaning & Scaling', shortDescription: 'Professional cleaning and tartar removal to ensure long-term gum health and prevent disease.', department: 'dental' as const },
+  { id: 'd3', title: 'Tooth-Coloured Fillings', shortDescription: 'Aesthetic composite fillings that perfectly match your natural tooth colour for seamless restoration.', department: 'dental' as const },
+  { id: 'd4', title: 'Root Canal Treatment (RCT)', shortDescription: 'Saving infected or severely damaged teeth through precise, pain-relieving endodontic therapy.', department: 'dental' as const },
+  { id: 'd5', title: 'Dental Crowns & Bridges', shortDescription: 'Restoring damaged teeth with custom crowns and replacing missing teeth with durable bridges.', department: 'dental' as const },
+  { id: 'd6', title: 'Dental Implants', shortDescription: 'Permanent titanium solutions for missing teeth restoring full chewing function and aesthetics.', department: 'dental' as const },
+  { id: 'd7', title: 'Orthodontic Treatment & Braces', shortDescription: 'Braces and aligners for teeth straightening, crowding correction, and bite alignment for all ages.', department: 'dental' as const },
+  { id: 'd8', title: 'Clear Aligners', shortDescription: 'Invisible teeth straightening solutions offering a modern, comfortable alternative to traditional braces.', department: 'dental' as const },
+  { id: 'd9', title: 'Teeth Whitening & Smile Designing', shortDescription: 'Professional whitening and complete smile makeover for a noticeably brighter, confident smile.', department: 'dental' as const },
+  { id: 'd10', title: 'Wisdom Tooth Removal', shortDescription: 'Safe, professional extraction of impacted and problematic wisdom teeth.', department: 'dental' as const },
+  { id: 'd11', title: 'Complete & Partial Dentures', shortDescription: 'Custom-made removable dentures designed for comfort in cases of complete or partial tooth loss.', department: 'dental' as const },
+  { id: 'd12', title: 'Children\'s & Emergency Dental Care', shortDescription: 'Gentle paediatric dental care and prompt treatment for urgent dental emergencies.', department: 'dental' as const },
 ];
 
 export default function ServicesClient() {
@@ -205,15 +255,12 @@ export default function ServicesClient() {
         </AnimateOnScroll>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          <ServiceCard service={rehabServices[0]} variant="large" />
-          <ServiceCard service={rehabServices[1]} variant="large" />
-          
-          <ServiceCard service={rehabServices[2]} variant="medium" />
-          <ServiceCard service={rehabServices[3]} variant="medium" />
-          <ServiceCard service={rehabServices[4]} variant="medium" />
-          
-          <ServiceCard service={rehabServices[5]} variant="small" />
-          <ServiceCard service={rehabServices[6]} variant="small" />
+          {rehabServices.map((service, idx) => {
+            let variant: 'large' | 'medium' | 'small' = 'small';
+            if (idx < 2) variant = 'large';
+            else if (idx < 5) variant = 'medium';
+            return <ServiceCard key={service.id} service={service} variant={variant} />;
+          })}
         </div>
       </div>
 
@@ -248,11 +295,13 @@ export default function ServicesClient() {
           </div>
         </AnimateOnScroll>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <ServiceCard service={dentalServices[0]} variant="large" />
-          <ServiceCard service={dentalServices[1]} variant="large" />
-          <ServiceCard service={dentalServices[2]} variant="medium" />
-          <ServiceCard service={dentalServices[3]} variant="medium" />
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {dentalServices.map((service, idx) => {
+            let variant: 'large' | 'medium' | 'small' = 'small';
+            if (idx < 2) variant = 'large';
+            else if (idx < 6) variant = 'medium';
+            return <ServiceCard key={service.id} service={service} variant={variant} />;
+          })}
         </div>
       </div>
 

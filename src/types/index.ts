@@ -5,6 +5,7 @@ export interface Doctor {
   designation: string;
   department: string;
   specializations: string[];
+  titles?: string[];
   bio: string;
   image: string;
   roles?: string[];
