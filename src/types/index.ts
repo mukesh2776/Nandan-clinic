@@ -6,9 +6,20 @@ export interface Doctor {
   department: string;
   specializations: string[];
   titles?: string[];
+  experience?: string;
+  education?: string[];
+  timings?: string;
   bio: string;
   image: string;
   roles?: string[];
+}
+
+export interface GalleryItem {
+  id: string;
+  title: string;
+  category: 'dental' | 'rehabilitation' | 'facility';
+  image: string;
+  description?: string;
 }
 
 export interface Service {

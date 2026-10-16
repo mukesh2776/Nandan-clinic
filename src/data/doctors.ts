@@ -28,6 +28,7 @@ export const doctors: Doctor[] = [
       'LIC Medical Examiner (LIC மருத்துவ பரிசோதகர்)',
       'Govt. Senior Civil Surgeon (அரசு சீனியர் சிவில் சர்ஜன்)',
     ],
+    timings: '3:00 PM – 9:00 PM (Only on appointment basis)',
     bio: 'First Physiatrist in and from Thanjavur. Did MBBS at Thanjavur Medical College and completed post-graduate D.PMR at Madras Medical College. Did Fellowship in Pain Management (FIPM) at Delhi Pain Management Centre. Specialist in rehabilitation of CP Child, CTEV, Gait abnormalities, Stroke (Hemiplegia), Traumatic Brain Injury, Spinal Cord Injury (Paraplegia / Quadriplegia). Interested in Amputee Rehabilitation, Prosthetic and Orthotic Management, Diabetic Foot Care and Pain Management. Also serves as Physiatrist, General Physician, Pain Physician, Family Physician, LIC Medical Examiner, and Government Senior Civil Surgeon.',
     image: '/images/doctors/dr-balamurali.jpeg',
     roles: [
@@ -41,15 +42,22 @@ export const doctors: Doctor[] = [
     id: 'dr-yasothai',
     name: 'Dr. G. Yasothai',
     qualifications: 'BDS, MBA',
-    designation: 'Dental Surgeon',
+    designation: 'Dental Surgeon & Healthcare Management Specialist',
     department: 'Dr. Bala Dental Clinic',
+    experience: '18 Years of Practical Experience in Dental Care',
+    education: [
+      'Bachelor of Dental Surgery (BDS) – Saveetha Dental College, affiliated with Dr. M.G.R. Medical University, Chennai',
+      'MBA in Hospital Management – SRM University',
+    ],
+    timings: 'Morning: 9:00 AM – 1:30 PM | Evening: 5:00 PM – 8:30 PM',
     specializations: [
       'Orthodontics (Braces)',
       'Dental Implants',
-      'Teeth Whitening',
+      'Teeth Whitening & Smile Designing',
       'General Dental Procedures',
+      'Cosmetic & Pediatric Dentistry',
     ],
-    bio: 'Dr. G. Yasothai is an experienced Dental Surgeon at Dr. Bala Dental Clinic, providing comprehensive dental care including orthodontic treatments, dental implants, teeth whitening, and general dental procedures. With a BDS degree and an MBA, she combines clinical expertise with a patient-centred approach to dental health.',
+    bio: 'Dr. G. Yasothai is an experienced dental professional with 18 years of practical experience in the dental field. She completed her Bachelor of Dental Surgery (BDS) at Saveetha Dental College, affiliated with Dr. M.G.R. Medical University, Chennai. She also holds an MBA in Hospital Management from SRM University.\n\nWith her extensive clinical experience and expertise in healthcare management, Dr. Yasothai is committed to providing quality dental care and ensuring a comfortable, patient-focused treatment experience.',
     image: '/images/doctors/dr-yasothai.jpeg',
   },
 ];

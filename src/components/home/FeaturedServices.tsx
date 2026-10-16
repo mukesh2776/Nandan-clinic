@@ -64,15 +64,20 @@ export default function FeaturedServices() {
           <div className="bg-gradient-to-br from-mint-light via-white to-mint-soft rounded-3xl p-6 lg:p-10 border border-teal-primary/20 shadow-sm overflow-hidden">
             <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
               <div className="w-full lg:w-1/2">
-                <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-teal-primary text-white text-xs font-bold uppercase tracking-wider mb-4 shadow-sm">
-                  <Sparkles className="w-3.5 h-3.5" />
-                  <span>Main Work &bull; Core Speciality</span>
+                <div className="flex flex-wrap items-center gap-2 mb-4">
+                  <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-teal-primary text-white text-xs font-bold uppercase tracking-wider shadow-sm">
+                    <Sparkles className="w-3.5 h-3.5" />
+                    <span>Main Work &bull; Core Speciality</span>
+                  </div>
+                  <div className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-teal-primary/10 text-teal-primary text-xs font-bold uppercase tracking-wider border border-teal-primary/20">
+                    <span>Timings: 10:00 AM – 6:00 PM</span>
+                  </div>
                 </div>
-                <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-text-primary mb-4 font-[family-name:var(--font-playfair)]">
+                <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-text-primary mb-3 font-[family-name:var(--font-playfair)]">
                   In-House Artificial Limb Centre
                 </h3>
                 <p className="text-teal-secondary font-medium text-base mb-3">
-                  Customised Artificial Limbs Fabricated On-Site &bull; Prosthetics &amp; Orthotics
+                  Customised Artificial Limbs Fabricated On-Site &bull; Prosthetics &amp; Orthotics &bull; <span className="text-teal-primary font-semibold">Timings: 10:00 AM – 6:00 PM</span>
                 </p>
                 <p className="text-text-secondary text-base leading-relaxed mb-6">
                   We are having an in-house Artificial Limb Centre where customised artificial limbs are fabricated on-site. Our main work encompasses complete Prosthetics &amp; Orthotics — from custom socket design and fabrication to precision alignment, patient fitting, and robotic gait rehabilitation for both upper and lower limb amputees.

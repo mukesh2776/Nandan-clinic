@@ -176,15 +176,20 @@ export default function ServicesClient() {
           <div className="bg-gradient-to-br from-mint-light via-white to-mint-soft rounded-3xl p-6 md:p-10 border-2 border-teal-primary/20 shadow-md">
             <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
               <div className="w-full lg:w-3/5">
-                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-teal-primary text-white text-xs font-bold uppercase tracking-wider mb-4">
-                  <Sparkles className="w-3.5 h-3.5" />
-                  <span>Main Work &bull; Core Speciality</span>
+                <div className="flex flex-wrap items-center gap-2 mb-4">
+                  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-teal-primary text-white text-xs font-bold uppercase tracking-wider">
+                    <Sparkles className="w-3.5 h-3.5" />
+                    <span>Main Work &bull; Core Speciality</span>
+                  </div>
+                  <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-teal-primary/10 text-teal-primary text-xs font-bold uppercase tracking-wider border border-teal-primary/20">
+                    <span>Timings: 10:00 AM – 6:00 PM</span>
+                  </div>
                 </div>
-                <h3 className="text-2xl md:text-3xl font-bold text-text-primary mb-4 font-[family-name:var(--font-playfair)]">
+                <h3 className="text-2xl md:text-3xl font-bold text-text-primary mb-3 font-[family-name:var(--font-playfair)]">
                   In-House Artificial Limb Centre
                 </h3>
                 <p className="text-teal-primary font-semibold text-base mb-4">
-                  Customised Artificial Limbs Fabricated On-Site
+                  Customised Artificial Limbs Fabricated On-Site &bull; <span className="underline decoration-teal-primary/40">Timings: 10:00 AM – 6:00 PM</span>
                 </p>
                 <p className="text-text-secondary leading-relaxed mb-6">
                   At NandaN Clinic, we operate a fully equipped in-house Artificial Limb Centre where customised artificial limbs are designed, fabricated, and fitted on-site. <strong>Prosthetics &amp; Orthotics is our main work</strong>. Under Dr. Balamurali&apos;s expert direction, every patient receives personalized measurements, custom socket fabrication, dynamic component selection, and comprehensive gait training.

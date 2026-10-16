@@ -3,31 +3,72 @@
 import React, { useState } from 'react';
 import Button from '@/components/shared/Button';
 import { generateWhatsAppUrl, generateAppointmentMessage } from '@/lib/utils';
+import { Clock, Info } from 'lucide-react';
+
+type DepartmentType = 'rehab' | 'dental' | 'artificial_limb';
+
+const DEPARTMENT_CONFIG: Record<DepartmentType, {
+  label: string;
+  doctor: string;
+  timingBadge: string;
+  appointmentNote?: string;
+  slots: string[];
+}> = {
+  dental: {
+    label: 'Dental Care (Dr. Bala Dental Clinic)',
+    doctor: 'Dr. G. Yasothai, BDS, MBA',
+    timingBadge: 'Morning: 9:00 AM – 1:30 PM | Evening: 5:00 PM – 8:30 PM',
+    slots: [
+      '9:00 AM', '9:30 AM', '10:00 AM', '10:30 AM', '11:00 AM', '11:30 AM', '12:00 PM', '12:30 PM', '1:00 PM',
+      '5:00 PM', '5:30 PM', '6:00 PM', '6:30 PM', '7:00 PM', '7:30 PM', '8:00 PM'
+    ],
+  },
+  rehab: {
+    label: 'Physical Medicine & Rehabilitation',
+    doctor: 'Dr. D. Balamurali, MBBS, D.PMR, FIPM',
+    timingBadge: '3:00 PM – 9:00 PM (Strictly on appointment basis)',
+    appointmentNote: 'Notice: Dr. Balamurali consultations are strictly on prior appointment basis.',
+    slots: [
+      '3:00 PM', '3:30 PM', '4:00 PM', '4:30 PM',
+      '5:00 PM', '5:30 PM', '6:00 PM', '6:30 PM',
+      '7:00 PM', '7:30 PM', '8:00 PM', '8:30 PM'
+    ],
+  },
+  artificial_limb: {
+    label: 'In-House Artificial Limb Centre',
+    doctor: 'Artificial Limb & Prosthetics Specialist',
+    timingBadge: '10:00 AM – 6:00 PM (Custom Fabrication & Fitting)',
+    slots: [
+      '10:00 AM', '10:30 AM', '11:00 AM', '11:30 AM',
+      '12:00 PM', '12:30 PM', '1:00 PM', '2:00 PM',
+      '2:30 PM', '3:00 PM', '3:30 PM', '4:00 PM',
+      '4:30 PM', '5:00 PM', '5:30 PM'
+    ],
+  },
+};
 
 export default function AppointmentForm() {
+  const [deptKey, setDeptKey] = useState<DepartmentType>('dental');
   const [formData, setFormData] = useState({
     name: '',
     phone: '',
-    department: 'Physical Medicine & Rehabilitation',
-    doctor: 'Dr. D. Balamurali',
+    department: DEPARTMENT_CONFIG.dental.label,
+    doctor: DEPARTMENT_CONFIG.dental.doctor,
     date: '',
-    time: '3:00 PM',
+    time: DEPARTMENT_CONFIG.dental.slots[0],
     message: ''
   });
 
-  const timeSlots = [
-    '3:00 PM', '3:30 PM', '4:00 PM', '4:30 PM',
-    '5:00 PM', '5:30 PM', '6:00 PM', '6:30 PM',
-    '7:00 PM', '7:30 PM', '8:00 PM', '8:30 PM'
-  ];
-
   const handleDeptChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    const dept = e.target.value;
-    setFormData({
-      ...formData,
-      department: dept,
-      doctor: dept === 'Dental Care' ? 'Dr. G. Yasothai' : 'Dr. D. Balamurali'
-    });
+    const key = e.target.value as DepartmentType;
+    setDeptKey(key);
+    const config = DEPARTMENT_CONFIG[key];
+    setFormData(prev => ({
+      ...prev,
+      department: config.label,
+      doctor: config.doctor,
+      time: config.slots[0],
+    }));
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
@@ -47,14 +88,16 @@ export default function AppointmentForm() {
       message: formData.message
     });
     
-    // Clinic primary WhatsApp number
-    const clinicPhone = '7395811646';
+    // Direct WhatsApp phone depending on department (dental goes to dental phone or main)
+    const clinicPhone = deptKey === 'dental' ? '9787818833' : '7395811646';
     const url = generateWhatsAppUrl(clinicPhone, message);
     window.open(url, '_blank');
   };
 
+  const activeConfig = DEPARTMENT_CONFIG[deptKey];
+
   return (
-    <div className="bg-white rounded-2xl p-6 md:p-8 shadow-sm">
+    <div className="bg-white rounded-2xl p-6 md:p-8 shadow-sm border border-border/60">
       <form onSubmit={handleSubmit}>
         <div className="mb-5">
           <label htmlFor="name" className="text-sm font-medium text-text-primary mb-1.5 block">
@@ -90,38 +133,50 @@ export default function AppointmentForm() {
         </div>
 
         <div className="mb-5">
-          <label htmlFor="department" className="text-sm font-medium text-text-primary mb-1.5 block">
-            Department *
+          <label htmlFor="departmentSelect" className="text-sm font-medium text-text-primary mb-1.5 block">
+            Department / Service *
           </label>
           <select
-            id="department"
-            name="department"
+            id="departmentSelect"
+            name="departmentSelect"
             required
-            value={formData.department}
+            value={deptKey}
             onChange={handleDeptChange}
-            className="w-full rounded-xl border border-border bg-white px-4 py-3 text-text-primary focus:border-teal-primary focus:ring-2 focus:ring-teal-primary/20 outline-none transition"
+            className="w-full rounded-xl border border-border bg-white px-4 py-3 text-text-primary focus:border-teal-primary focus:ring-2 focus:ring-teal-primary/20 outline-none transition font-medium"
           >
-            <option value="Physical Medicine & Rehabilitation">Physical Medicine & Rehabilitation</option>
-            <option value="Dental Care">Dental Care</option>
+            <option value="dental">Dental Care — Dr. G. Yasothai, BDS, MBA</option>
+            <option value="rehab">Physical Medicine &amp; Rehabilitation — Dr. D. Balamurali</option>
+            <option value="artificial_limb">In-House Artificial Limb Centre (Prosthetics &amp; Orthotics)</option>
           </select>
+        </div>
+
+        {/* Dynamic Timing Callout Banner */}
+        <div className="mb-5 p-3.5 rounded-xl bg-mint-light/70 border border-teal-primary/20 flex items-start gap-2.5">
+          <Clock className="w-4 h-4 text-teal-primary shrink-0 mt-0.5" />
+          <div className="text-xs">
+            <span className="font-bold text-teal-primary uppercase tracking-wider block">Timings for Selected Service:</span>
+            <span className="text-text-primary font-semibold text-xs mt-0.5 block">{activeConfig.timingBadge}</span>
+            {activeConfig.appointmentNote && (
+              <span className="text-accent font-semibold text-[11px] mt-1 block flex items-center gap-1">
+                <Info className="w-3 h-3 shrink-0" />
+                {activeConfig.appointmentNote}
+              </span>
+            )}
+          </div>
         </div>
 
         <div className="mb-5">
           <label htmlFor="doctor" className="text-sm font-medium text-text-primary mb-1.5 block">
-            Preferred Doctor
+            Assigned Specialist / Department
           </label>
-          <select
+          <input
+            type="text"
             id="doctor"
             name="doctor"
-            required
-            value={formData.doctor}
-            onChange={handleChange}
-            disabled // Auto-selected based on department for now
-            className="w-full rounded-xl border border-border bg-gray-50 px-4 py-3 text-text-secondary outline-none"
-          >
-            <option value="Dr. D. Balamurali">Dr. D. Balamurali (Rehab)</option>
-            <option value="Dr. G. Yasothai">Dr. G. Yasothai (Dental)</option>
-          </select>
+            readOnly
+            value={activeConfig.doctor}
+            className="w-full rounded-xl border border-border bg-gray-50 px-4 py-3 text-text-secondary outline-none text-sm font-medium"
+          />
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mb-5">
@@ -142,7 +197,7 @@ export default function AppointmentForm() {
           </div>
           <div>
             <label htmlFor="time" className="text-sm font-medium text-text-primary mb-1.5 block">
-              Preferred Time *
+              Preferred Time Slot *
             </label>
             <select
               id="time"
@@ -152,7 +207,7 @@ export default function AppointmentForm() {
               onChange={handleChange}
               className="w-full rounded-xl border border-border bg-white px-4 py-3 text-text-primary focus:border-teal-primary focus:ring-2 focus:ring-teal-primary/20 outline-none transition"
             >
-              {timeSlots.map(slot => (
+              {activeConfig.slots.map(slot => (
                 <option key={slot} value={slot}>{slot}</option>
               ))}
             </select>
@@ -178,11 +233,11 @@ export default function AppointmentForm() {
           variant="accent"
           className="w-full py-4 text-base font-semibold"
         >
-          Submit Appointment Request
+          Submit Appointment Request via WhatsApp
         </Button>
 
         <p className="text-xs text-text-secondary text-center mt-4 leading-relaxed">
-          Appointment requests are subject to clinic confirmation. Our team will respond via WhatsApp to confirm your booking.
+          Appointment requests are subject to confirmation. Dr. Balamurali consultations are strictly on prior appointment basis. Our team will verify and confirm your slot promptly.
         </p>
       </form>
     </div>

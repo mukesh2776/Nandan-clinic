@@ -38,7 +38,7 @@ export default function Footer() {
               <li><Link href="/about" className="hover:opacity-100 hover:underline transition-all">About</Link></li>
               <li><Link href="/services" className="hover:opacity-100 hover:underline transition-all">Services</Link></li>
               <li><Link href="/doctors" className="hover:opacity-100 hover:underline transition-all">Doctors</Link></li>
-              <li><Link href="/testimonials" className="hover:opacity-100 hover:underline transition-all">Testimonials</Link></li>
+              <li><Link href="/gallery" className="hover:opacity-100 hover:underline transition-all">Gallery</Link></li>
               <li><Link href="/contact" className="hover:opacity-100 hover:underline transition-all">Contact Us</Link></li>
             </ul>
           </div>
@@ -48,11 +48,11 @@ export default function Footer() {
             <h4 className="font-semibold text-lg mb-6">Key Services</h4>
             <ul className="space-y-3 opacity-90">
               <li><Link href="/services" className="hover:opacity-100 hover:underline transition-all">Robotic Gait Training</Link></li>
+              <li><Link href="/services" className="hover:opacity-100 hover:underline transition-all">In-House Artificial Limb Centre</Link></li>
               <li><Link href="/services" className="hover:opacity-100 hover:underline transition-all">Pain Management</Link></li>
               <li><Link href="/services" className="hover:opacity-100 hover:underline transition-all">Physiotherapy</Link></li>
               <li><Link href="/services" className="hover:opacity-100 hover:underline transition-all">Dental Implants</Link></li>
-              <li><Link href="/services" className="hover:opacity-100 hover:underline transition-all">Orthodontics</Link></li>
-              <li><Link href="/services" className="hover:opacity-100 hover:underline transition-all">Teeth Whitening</Link></li>
+              <li><Link href="/services" className="hover:opacity-100 hover:underline transition-all">Orthodontics (Braces)</Link></li>
             </ul>
           </div>
 
@@ -74,9 +74,13 @@ export default function Footer() {
                   <a href="https://wa.me/917395811646" target="_blank" rel="noopener noreferrer" className="hover:underline">WhatsApp</a>
                 </div>
               </li>
-              <li className="flex items-center gap-3">
-                <Clock className="w-5 h-5 flex-shrink-0" />
-                <span>3:00 PM - 9:00 PM</span>
+              <li className="flex items-start gap-3">
+                <Clock className="w-5 h-5 flex-shrink-0 mt-0.5" />
+                <div className="text-xs space-y-1">
+                  <p><span className="font-semibold text-white">Dr. Yasothai:</span> 9am–1:30pm &amp; 5pm–8:30pm</p>
+                  <p><span className="font-semibold text-white">Dr. Balamurali:</span> 3pm–9pm (Appt only)</p>
+                  <p><span className="font-semibold text-white">Artificial Limb:</span> 10am–6pm</p>
+                </div>
               </li>
               <li className="flex items-center gap-3">
                 <ExternalLink className="w-5 h-5 flex-shrink-0" />

@@ -85,10 +85,12 @@ export default function LocationPreview() {
                     <Clock size={20} />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-text-primary mb-1">Clinic Timings</h4>
-                    <p className="text-text-secondary text-sm">
-                      3:00 PM – 9:00 PM (Daily)
-                    </p>
+                    <h4 className="font-semibold text-text-primary mb-1">Working &amp; Consultation Hours</h4>
+                    <div className="text-text-secondary text-xs space-y-1">
+                      <p><span className="font-semibold text-text-primary">Dr. G. Yasothai:</span> 9:00 AM – 1:30 PM &amp; 5:00 PM – 8:30 PM</p>
+                      <p><span className="font-semibold text-text-primary">Dr. Balamurali:</span> 3:00 PM – 9:00 PM <span className="text-accent font-semibold">(By appt only)</span></p>
+                      <p><span className="font-semibold text-text-primary">Artificial Limb Centre:</span> 10:00 AM – 6:00 PM</p>
+                    </div>
                   </div>
                 </div>
               </div>

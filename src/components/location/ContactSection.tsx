@@ -67,13 +67,37 @@ export default function ContactSection({ className = '' }: ContactSectionProps) 
         <div className="w-12 h-12 bg-mint-soft rounded-full flex items-center justify-center mb-4 text-teal-primary">
           <Clock className="w-6 h-6" />
         </div>
-        <h3 className="text-lg font-bold text-teal-primary mb-2">Hours</h3>
-        <p className="text-text-primary text-sm md:text-base leading-relaxed font-medium">
-          3:00 PM – 9:00 PM
-        </p>
-        <p className="text-sm text-text-secondary mt-2">
-          Open all days. Appointments are subject to prior confirmation.
-        </p>
+        <h3 className="text-lg font-bold text-teal-primary mb-3">Consultation Hours</h3>
+        <div className="space-y-3.5 text-sm">
+          <div className="border-b border-border/50 pb-2.5">
+            <p className="font-semibold text-xs uppercase tracking-wider text-teal-primary">
+              Dr. G. Yasothai, BDS, MBA
+            </p>
+            <p className="text-text-primary font-medium mt-0.5">
+              Morning: 9:00 AM – 1:30 PM<br />
+              Evening: 5:00 PM – 8:30 PM
+            </p>
+          </div>
+          <div className="border-b border-border/50 pb-2.5">
+            <p className="font-semibold text-xs uppercase tracking-wider text-teal-primary">
+              Dr. Balamurali
+            </p>
+            <p className="text-text-primary font-medium mt-0.5">
+              3:00 PM – 9:00 PM
+            </p>
+            <span className="inline-block mt-0.5 text-xs text-accent font-semibold">
+              *Only on appointment basis
+            </span>
+          </div>
+          <div>
+            <p className="font-semibold text-xs uppercase tracking-wider text-teal-primary">
+              Artificial Limb Centre
+            </p>
+            <p className="text-text-primary font-medium mt-0.5">
+              10:00 AM – 6:00 PM
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   );

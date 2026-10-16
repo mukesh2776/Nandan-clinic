@@ -15,7 +15,7 @@ export const clinicInfo: ClinicInfo = {
   altPhone: '9843411646',
   dentalPhone: '9787818833',
   whatsapp: '7395811646',
-  timing: '3:00 PM – 9:00 PM',
+  timing: 'Dr. Yasothai: 9:00 AM–1:30 PM & 5:00 PM–8:30 PM | Dr. Balamurali: 3:00 PM–9:00 PM (Appt only) | Artificial Limb: 10:00 AM–6:00 PM',
   googleMapsUrl: 'https://maps.app.goo.gl/cBXrAcy7vLk93ms97?g_st=aw',
   googleMapsEmbed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.123456!2d79.1234567!3d10.7654321!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTDCsDQ1JzU1LjYiTiA3OcKwMDcnMjQuNCJF!5e0!3m2!1sen!2sin!4v1234567890',
   facebook: 'https://www.facebook.com/share/19CBxXCYto/',

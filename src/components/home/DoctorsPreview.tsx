@@ -58,8 +58,9 @@ export default function DoctorsPreview() {
                 <div>
                   <h3 className="text-2xl font-bold text-text-primary mb-1">Dr. G. Yasothai</h3>
                   <p className="text-accent font-medium mb-3">BDS, MBA (Hospital Management)</p>
-                  <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 text-text-secondary text-sm mb-6">
-                    <span className="bg-orange-50 text-accent px-3 py-1 rounded-full">Dental Surgeon</span>
+                  <div className="flex flex-wrap items-center gap-2 text-text-secondary text-sm mb-6">
+                    <span className="bg-orange-50 text-accent px-3 py-1 rounded-full text-xs font-semibold">Dental Surgeon</span>
+                    <span className="bg-mint-soft text-teal-primary px-3 py-1 rounded-full text-xs font-semibold">18 Years Experience</span>
                   </div>
                   <Link href="/doctors" className="inline-flex items-center text-accent font-semibold hover:opacity-80 transition-opacity">
                     View Profile

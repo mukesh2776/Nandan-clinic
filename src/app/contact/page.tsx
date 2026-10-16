@@ -149,12 +149,20 @@ export default function ContactPage() {
                     <Clock className="w-6 h-6" />
                   </div>
                   <h3 className="text-2xl font-bold text-teal-primary mb-3">Clinic Timings &amp; Visits</h3>
-                  <p className="text-text-primary text-base font-semibold mb-2">
-                    Daily Consultation Hours: 3:00 PM – 9:00 PM
-                  </p>
-                  <p className="text-text-secondary text-sm leading-relaxed mb-6">
-                    Our clinic is open every day during evening hours. Prior appointment or confirmation via phone or WhatsApp is recommended to avoid waiting times.
-                  </p>
+                  <div className="space-y-3 mb-6">
+                    <div className="bg-white/80 rounded-xl p-3 border border-teal-primary/15">
+                      <p className="text-xs font-bold text-teal-primary uppercase tracking-wider">Dr. G. Yasothai, BDS, MBA (Dental Care)</p>
+                      <p className="text-sm font-semibold text-text-primary mt-0.5">Morning: 9:00 AM – 1:30 PM &bull; Evening: 5:00 PM – 8:30 PM</p>
+                    </div>
+                    <div className="bg-white/80 rounded-xl p-3 border border-teal-primary/15">
+                      <p className="text-xs font-bold text-teal-primary uppercase tracking-wider">Dr. D. Balamurali (Physiatry &amp; Pain)</p>
+                      <p className="text-sm font-semibold text-text-primary mt-0.5">3:00 PM – 9:00 PM <span className="text-xs text-accent font-semibold ml-1">(Only on appointment basis)</span></p>
+                    </div>
+                    <div className="bg-white/80 rounded-xl p-3 border border-teal-primary/15">
+                      <p className="text-xs font-bold text-teal-primary uppercase tracking-wider">In-House Artificial Limb Centre</p>
+                      <p className="text-sm font-semibold text-text-primary mt-0.5">10:00 AM – 6:00 PM</p>
+                    </div>
+                  </div>
                 </div>
                 <div className="pt-4 border-t border-teal-primary/20 flex flex-wrap gap-4">
                   <a href="tel:7395811646" className="text-teal-primary font-semibold text-sm hover:underline flex items-center gap-1.5">

@@ -12,7 +12,7 @@ export const rehabilitationServices: Service[] = [
   {
     id: 'artificial-limb-centre',
     name: 'Artificial Limb Centre — Prosthetics & Orthotics',
-    description: 'Our in-house Artificial Limb Centre is where customised artificial limbs are fabricated on-site. We provide comprehensive prosthetic and orthotic services for upper and lower limb amputees, including custom design, fabrication, fitting, alignment, and complete rehabilitation support. Prosthetics & Orthotics is our main work and core speciality.',
+    description: 'Timings: 10:00 AM – 6:00 PM. Our in-house Artificial Limb Centre is where customised artificial limbs are fabricated on-site. We provide comprehensive prosthetic and orthotic services for upper and lower limb amputees, including custom design, fabrication, fitting, alignment, and complete rehabilitation support. Prosthetics & Orthotics is our main work and core speciality.',
     department: 'rehabilitation',
     featured: true,
     size: 'large',

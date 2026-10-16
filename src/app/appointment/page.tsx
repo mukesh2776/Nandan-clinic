@@ -79,11 +79,13 @@ export default function AppointmentPage() {
                     </a>
                   </div>
 
-                  <div className="flex items-center gap-4">
-                    <Clock className="w-6 h-6 text-teal-primary shrink-0" />
-                    <p className="text-sm md:text-base">
-                      3:00 PM – 9:00 PM (Mon-Sun)
-                    </p>
+                  <div className="flex items-start gap-4">
+                    <Clock className="w-6 h-6 text-teal-primary shrink-0 mt-0.5" />
+                    <div className="text-sm space-y-1">
+                      <p><span className="font-semibold text-text-primary">Dr. G. Yasothai:</span> 9:00 AM – 1:30 PM &amp; 5:00 PM – 8:30 PM</p>
+                      <p><span className="font-semibold text-text-primary">Dr. Balamurali:</span> 3:00 PM – 9:00 PM <span className="text-accent font-semibold text-xs">(By appt only)</span></p>
+                      <p><span className="font-semibold text-text-primary">Artificial Limb Centre:</span> 10:00 AM – 6:00 PM</p>
+                    </div>
                   </div>
 
                   <div className="flex items-center gap-4">

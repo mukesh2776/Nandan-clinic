@@ -18,14 +18,14 @@ export default function Hero() {
           </AnimateOnScroll>
           
           <AnimateOnScroll animation="fade-right" delay={100}>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-text-primary leading-tight mb-6 font-[family-name:var(--font-playfair)]">
+            <h1 className="text-3xl md:text-4xl lg:text-4xl font-bold text-text-primary leading-tight mb-6 font-[family-name:var(--font-playfair)]">
               Specialist Care for Pain, Rehabilitation & Dental Health
             </h1>
           </AnimateOnScroll>
           
           <AnimateOnScroll animation="fade-right" delay={200}>
             <p className="text-lg text-text-secondary mb-8 max-w-2xl leading-relaxed">
-              Comprehensive rehabilitation, pain management, and dental care under one roof in Thanjavur. Led by experienced specialists committed to restoring mobility and healthy smiles.
+              Comprehensive rehabilitation, pain management,Physical Medicine and dental care under one roof in Thanjavur. Led by experienced specialists committed to restoring mobility and healthy smiles.
             </p>
           </AnimateOnScroll>
           
@@ -48,13 +48,13 @@ export default function Hero() {
               {/* Decorative Circle */}
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-mint-soft rounded-full -z-10"></div>
               
-              {/* Main Image */}
-              <div className="relative w-full h-full rounded-3xl overflow-hidden shadow-2xl">
+              {/* Main Image / Logo */}
+              <div className="relative w-full h-full rounded-3xl overflow-hidden shadow-2xl bg-white flex items-center justify-center p-6 border border-teal-primary/10">
                 <Image
-                  src="/images/doctors/dr-balamurali.jpeg"
-                  alt="Dr. Balamurali"
+                  src="/images/logo.jpg"
+                  alt="NandaN Robotic Rehabilitation Centre & Dr. Bala Dental Clinic Logo"
                   fill
-                  className="object-cover"
+                  className="object-contain p-4"
                   priority
                 />
               </div>

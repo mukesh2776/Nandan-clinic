@@ -4,7 +4,7 @@ import DoctorsPreview from '@/components/home/DoctorsPreview';
 import FeaturedServices from '@/components/home/FeaturedServices';
 import ClinicStory from '@/components/home/ClinicStory';
 import WhyChooseUs from '@/components/home/WhyChooseUs';
-import TestimonialsPreview from '@/components/home/TestimonialsPreview';
+import GalleryPreview from '@/components/home/GalleryPreview';
 import AppointmentCTA from '@/components/home/AppointmentCTA';
 import LocationPreview from '@/components/home/LocationPreview';
 
@@ -17,7 +17,7 @@ export default function HomePage() {
       <FeaturedServices />
       <ClinicStory />
       <WhyChooseUs />
-      <TestimonialsPreview />
+      <GalleryPreview />
       <AppointmentCTA />
       <LocationPreview />
     </>
